@@ -119,4 +119,9 @@ Auth.signTransaction = function (trx, keys) {
 	return signed_transaction.toObject(Object.assign(trx, { signatures: signatures }))
 };
 
+// @parameter 1 : buffer (string)
+// @parameter 2 : private_signing_key (string)
+// returns a signature of type Signature (which can be made readable with .toHex() or .toBuffer())
+Auth.signBuffer = Signature.signBuffer;
+
 module.exports = Auth;
